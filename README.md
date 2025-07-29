@@ -7,3 +7,6 @@ One of the other cool features is the hability to reorder the windows positions 
 
 ### Screenshot of the app
 ![Quick Example](app.png)
+
+#### Active Window Highlight
+![Active Window](Captura de ecrã 2025-07-29 011742.png)
