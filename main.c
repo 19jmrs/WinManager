@@ -77,10 +77,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
     // Load previously saved window order
     LoadWindowOrder();
 
-    // Register global hotkey: Shift + Tab (VK_TAB with MOD_SHIFT)
-    if (!RegisterHotKey(hwnd, 1, MOD_SHIFT, VK_TAB))
+    // Register global hotkey: Alt + W (W key with MOD_ALT)
+    if (!RegisterHotKey(hwnd, 1, MOD_ALT, 'W'))
     {
-        MessageBox(NULL, L"Failed to register hotkey Shift+Tab", L"Error", MB_OK);
+        MessageBox(NULL, L"Failed to register hotkey Alt+W", L"Error", MB_OK);
     }
 
     // Don't show the window initially
@@ -113,7 +113,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         return 0;
 
     case WM_HOTKEY:
-        // Handle Shift+Tab hotkey press
+        // Handle Alt+W hotkey press
         if (wParam == 1) {
             if (!g_showingTabs) {
                 ShowTabsOverlay(hwnd);
